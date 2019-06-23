@@ -12,13 +12,9 @@ canvas.pack(side = "top")
 canvas.place(x = 200, y = 10)
 
 # 색 버튼 생성
-butten1 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "검정색", repeatdelay=1, repeatinterval=100, activebackground="black")
-butten1.place(x = 300, y = 500)
-butten2 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "빨간색", repeatdelay=1, repeatinterval=100, activebackground="red")
-butten2.place(x = 400, y = 500)
-butten3 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "파란색", repeatdelay=1, repeatinterval=100, activebackground="blue")
-butten3.place(x = 500, y = 500)
-butten4 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "지우개", repeatdelay=1, repeatinterval=100, activebackground="white")
-butten4.place(x = 600, y = 500)
+butten1 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "검정색", repeatdelay=1, repeatinterval=100, activebackground="black").place(x = 300, y = 500)
+butten2 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "빨간색", repeatdelay=1, repeatinterval=100, activebackground="red").place(x = 400, y = 500)
+butten3 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "파란색", repeatdelay=1, repeatinterval=100, activebackground="blue").place(x = 500, y = 500)
+butten4 = tkinter.Button(relief = "solid", width = 10, height = 1, text = "지우개", repeatdelay=1, repeatinterval=100, activebackground="white").place(x = 600, y = 500)
 
 window.mainloop()
