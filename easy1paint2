@@ -1,0 +1,244 @@
+# 함수로 전체 묶기
+def easy1paint2_painting():
+
+    #임폴트
+    import tkinter
+
+    # 글로벌
+    global x1, y1, x2, y2, draw_color
+    # 시작 지점
+    x1, y1, x2, y2 = None, None, None, None
+    # 색깔
+    draw_color = "black"
+
+    # 메인 설정
+    window = tkinter.Tk()
+    window.title("easy1의 그림판")
+    window.geometry("1000x900+100+100")
+    window.resizable(False, False)
+
+    # 캔버스 설정1
+    canvas = tkinter.Frame(window, width = 600, height = 450, relief = "solid", borderwidth = 1)
+    canvas.pack(side = "top")
+    canvas.place(x = 200, y = 200)
+    canvas = tkinter.Canvas(canvas, width = 600, height = 450, cursor = "pencil")
+
+    # 선 그리기 함수
+    def mouseClick(event):
+        global x1, y1, x2, y2
+        x1 = event.x
+        y1 = event.y
+
+    def mouseDrop(event):
+        global x1, y1, x2, y2
+        x2 = event.x
+        y2 = event.y
+        canvas.create_line(x1, y1, x2, y2, width = 5, fill = draw_color)
+
+    # 색 버튼 함수
+    def whiteButton():
+        global draw_color
+        draw_color = "white"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+    def blackButton():
+        global draw_color
+        draw_color = "black"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+    def redButton():
+        global draw_color
+        draw_color = "red"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def yellowButton():
+        global draw_color
+        draw_color = "yellow"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def blueButton():
+        global draw_color
+        draw_color = "blue"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def greenButton():
+        global draw_color
+        draw_color = "green"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+    def orangeButton():
+        global draw_color
+        draw_color = "orange"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def lightgreenButton():
+        global draw_color
+        draw_color = "lightgreen"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def turquoiseButton():
+        global draw_color
+        draw_color = "turquoise"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def indigoButton():
+        global draw_color
+        draw_color = "indigo"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def purpleButton():
+        global draw_color
+        draw_color = "purple"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def grayButton():
+        global draw_color
+        draw_color = "gray"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def goldButton():
+        global draw_color
+        draw_color = "gold"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def silverButton():
+        global draw_color
+        draw_color = "silver"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def skyblueButton():
+        global draw_color
+        draw_color = "skyblue"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+
+    def brownButton():
+        global draw_color
+        draw_color = "brown"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+    def RosyBrown1Button():
+        global draw_color
+        draw_color = "RosyBrown1"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,y=200)
+
+    def lemonchiffonButton():
+        global draw_color
+        draw_color = "lemonchiffon"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,
+                                                                                                                y=200)
+
+    def mintcreamButton():
+        global draw_color
+        draw_color = "mintcream"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,y=200)
+
+    def lavenderButton():
+        global draw_color
+        draw_color = "lavender"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15,y=200)
+
+    def cyanButton():
+        global draw_color
+        draw_color = "cyan"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔",foreground=draw_color).place(x=15,y=200)
+
+
+    def aquamarineButton():
+        global draw_color
+        draw_color = "aquamarine"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔",foreground=draw_color).place(x=15,y=200)
+
+    def khakiButton():
+        global draw_color
+        draw_color = "khaki"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15, y=200)
+
+    def lightpinkButton():
+        global draw_color
+        draw_color = "lightpink"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔", foreground=draw_color).place(x=15, y=200)
+
+    def darkvioletButton():
+        global draw_color
+        draw_color = "darkviolet"
+        label = tkinter.Label(window, relief="solid", width=10, height=1, text="붓 색깔",foreground=draw_color).place(x=15, y=200)
+
+    # 메뉴로 돌아가기 함수
+    def return_menu():
+        window.destroy()
+        from easy1paint import easy1paint_menu
+        easy1paint_menu()
+
+    # 색상 프레임
+    color_frame = tkinter.Frame(window).grid(row = 0, column = 1, sticky = tkinter.E)
+
+    # 색 버튼
+    white_button = tkinter.Button(color_frame, background = "white", width = 3, command = whiteButton).grid(row = 0, column = 0, sticky = tkinter.E)
+    black_button = tkinter.Button(color_frame, background = "black", width = 3, command = blackButton).grid(row = 0, column = 1, sticky = tkinter.E)
+    red_button = tkinter.Button(color_frame, background = "red", width = 3, command = redButton).grid(row = 0, column = 2, sticky = tkinter.E)
+    blue_button = tkinter.Button(color_frame, background = "blue", width = 3, command = blueButton).grid(row = 0, column = 3, sticky = tkinter.E)
+    yellow_button = tkinter.Button(color_frame, background = "yellow", width = 3, command = yellowButton).grid(row = 0, column = 4, sticky = tkinter.E)
+    green_button = tkinter.Button(color_frame, background = "green", width = 3, command = greenButton).grid(row = 0, column = 5, sticky = tkinter.E)
+    orange_button = tkinter.Button(color_frame, background = "orange", width = 3, command = orangeButton).grid(row = 0, column = 6, sticky = tkinter.E)
+    lightgreen_button = tkinter.Button(color_frame, background = "lightgreen", width = 3, command = lightgreenButton).grid(row = 0, column = 7, sticky = tkinter.E)
+    turquoise_button = tkinter.Button(color_frame, background = "turquoise", width = 3, command = turquoiseButton).grid(row = 0, column = 8, sticky = tkinter.E)
+    indigo_button = tkinter.Button(color_frame, background = "indigo", width = 3, command = indigoButton).grid(row = 0, column = 9, sticky = tkinter.E)
+    Purple_button = tkinter.Button(color_frame, background = "Purple", width = 3, command = purpleButton).grid(row = 0, column = 10, sticky = tkinter.E)
+    gray_button = tkinter.Button(color_frame, background = "gray", width = 3, command = grayButton).grid(row = 0, column = 11, sticky = tkinter.E)
+    gold_button = tkinter.Button(color_frame, background = "gold", width = 3, command = goldButton).grid(row = 0, column = 12, sticky = tkinter.E)
+    silver_button = tkinter.Button(color_frame, background = "silver", width = 3, command = silverButton).grid(row = 0, column = 13, sticky = tkinter.E)
+    skyblue_button = tkinter.Button(color_frame, background = "skyblue", width = 3, command = skyblueButton).grid(row = 0, column = 14, sticky = tkinter.E)
+    brown_button = tkinter.Button(color_frame, background = "brown", width = 3, command = brownButton).grid(row = 0, column = 15, sticky = tkinter.E)
+    lemonchiffon_button = tkinter.Button(color_frame, background="lemonchiffon", width=3, command=lemonchiffonButton).grid(row=0,column=16, sticky=tkinter.E)
+    mintcreambutton = tkinter.Button(color_frame, background="mintcream", width=3, command=mintcreamButton).grid(row=0, column=17, sticky=tkinter.E)
+    lavender_button = tkinter.Button(color_frame, background="lavender", width=3, command=lavenderButton).grid(row=0, column=18,sticky=tkinter.E)
+    cyan_button = tkinter.Button(color_frame, background="cyan", width=3, command=cyanButton).grid(row=0, column=19, sticky=tkinter.E)
+    aquamarine_button = tkinter.Button(color_frame, background="aquamarine", width=3, command=aquamarineButton).grid(row=0, column=20,sticky=tkinter.E)
+    khaki_button = tkinter.Button(color_frame, background="khaki", width=3, command=khakiButton).grid(row=0, column=21, sticky=tkinter.E)
+    lightpink_button = tkinter.Button(color_frame, background="lightpink", width=3, command=lightpinkButton).grid(row=0, column=22, sticky=tkinter.E)
+    darkviolet_button = tkinter.Button(color_frame, background="darkviolet", width=3, command=darkvioletButton).grid(row=0, column=23, sticky=tkinter.E)
+
+    # 버튼 생성
+    pen_butten = tkinter.Button(relief = "solid", width = 10, height = 1, text = "펜", repeatdelay = 1, repeatinterval = 100, activebackground = "white").place(x = 105, y = 200)
+    brush_butten = tkinter.Button(relief = "solid", width = 10, height = 1, text = "붓", repeatdelay = 1, repeatinterval = 100, activebackground = "white").place(x = 15, y = 235)
+    eraser_butten = tkinter.Button(relief = "solid", width = 10, height = 1, text = "지우개", repeatdelay = 1, repeatinterval = 100, activebackground = "white").place(x = 105, y = 235)
+    menu_button = tkinter.Button(window, relief = "solid", width = 10, height = 1, text = "메뉴로 가기", command = return_menu, repeatdelay = 1, repeatinterval = 100, activebackground = "white").place(x = 15, y = 270)
+
+    # 라벨 생성
+    label=tkinter.Label(window,  relief = "solid", width = 10, height = 1, text = "붓 색깔", foreground = draw_color).place(x = 15, y = 200)
+
+    # 캔버스 설정2
+    canvas.bind("<Button-1>", mouseClick)
+    canvas.bind("<ButtonRelease-1>", mouseDrop)
+    canvas.pack()
+
+    #마무리
+    window.mainloop()
