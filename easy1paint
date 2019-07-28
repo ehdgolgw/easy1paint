@@ -1,0 +1,27 @@
+# 임폴트
+import tkinter
+
+# 함수로 전체 묶기
+def easy1paint_menu():
+    # 메인 설정
+    menu_window = tkinter.Tk()
+    menu_window.title("easy1의 그림판 메뉴")
+    menu_window.geometry("1000x900+100+100")
+    menu_window.resizable(False, False)
+
+    # 함수 설정
+    def paint():
+        from easy1paint2 import easy1paint2_painting
+        menu_window.destroy()
+        easy1paint2_painting()
+
+    # 버튼 생성
+    button1 = tkinter.Button(menu_window, text="easy1의 첫번쨰 그림판", height=1, width=20, command=paint).place(x=430, y=50)
+
+    # 라벨 생성
+    label = tkinter.Label(menu_window, text="easy1의 그림판에 오신 것을 환영합니다\n밑에 있는 버튼을 선택해주세요~")
+    label.pack()
+
+    menu_window.mainloop()
+
+easy1paint_menu()
